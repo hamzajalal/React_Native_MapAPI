@@ -1,0 +1,18 @@
+# Setup Environment Variables
+
+export CLIENT_ID='BGNIOVZKLLGF0JM3U5KSBOZVU5GFXAQXOMGYRLQJH4XIK5JD'
+export CLIENT_SECRET='JCFKLQ2B4LSCZPGQB20DJCKEL12T2QL5RYTOTME10PYYW22P'
+
+# GET /venues/49d51ce3f964a520675c1fe3
+
+curl -X GET -G "https://api.foursquare.com/v2/venues/49d51ce3f964a520675c1fe3" \
+-d v=20170101 \
+-d client_id=$CLIENT_ID \
+-d client_secret=$CLIENT_SECRET
+
+
+# GET /checkins/recent
+
+curl -X GET -G "https://api.foursquare.com/v2/checkins/recent" \
+-d v=20170101 \
+-d oauth_token=ACCESS_TOKEN
